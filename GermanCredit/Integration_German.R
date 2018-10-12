@@ -18,9 +18,9 @@ MixSampler <- function(zz)
   options(mc.cores = parallel::detectCores())
   d <- 25
   N <- 1000
-  R <- get(load(file="R.RData"))
-  S <- get(load(file="S.RData"))
-  StartPoint <- get(load(file="StartPoint.RData"))
+  R <- get(load(file="R.RData"))                   # covariates
+  S <- get(load(file="S.RData"))                   # response
+  StartPoint <- get(load(file="StartPoint.RData")) # starting point, maximum likelihood estimator 
   init0 <- StartPoint
   data = list(d=d,N=N,R=R,S=S)
   iter0 <- 25e3
