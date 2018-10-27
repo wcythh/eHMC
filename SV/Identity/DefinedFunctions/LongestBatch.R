@@ -23,7 +23,7 @@ LongestBatch <- function(U,grad_U,epsilon,L,M,x)
     if(Stop == 0)
     {
       Delta_x <- proposed_x - current_x
-      Increment <- sum(Delta_x * proposed_v)
+      Increment <- sum(Delta_x * proposed_v/M)
       if(is.na(Increment))
       {
         return(c(current_x, 0, NA, ell, ell))
