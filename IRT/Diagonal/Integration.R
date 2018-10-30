@@ -9,7 +9,7 @@ library(coda)
 source("DefinedFunctions/data.R")
 
 #################### NUTS #############################
-set.seed(1e6)
+set.seed(1e7)
 
 #init0 <- c(log(1.0142e+00), theta0, log(5.0555e-01), log(a0), -9.4075e-01, log(2.1945e+00), b0)
 
