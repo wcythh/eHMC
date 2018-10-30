@@ -24,7 +24,7 @@ fit <- stan("irt_2pl_log.stan",data=data, chains=40, iter=iter0, warmup = warmup
             save_dso = FALSE, verbose=TRUE,algorithm = "NUTS",
             control = list(adapt_engaged=TRUE,stepsize=0.01,adapt_delta=0.95,
                            metric="unit_e",max_treedepth=14))
-source("DefinedFunctions/UandGradU1.R")
+source("DefinedFunctions/UandGradU.R")
 source("DefinedFunctions/Leapfrog.R")
 source("DefinedFunctions/LongestBatch.R")
 source("DefinedFunctions/Transformation.R")
