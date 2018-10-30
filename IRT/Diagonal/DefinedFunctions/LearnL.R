@@ -35,7 +35,7 @@ LearnL <- function(epsilon,M,theta,d,Niter,feature_names,U,grad_U,LongestBatch)
   print(round(c(ratio/Niter,time_L),digits = 4))
   
   Xsamp_LearnL <- Transformation(Xsim, feature_names)
-  return(list(epsilon=epsilon, Niter=Niter, L_emp=L_emp,
-              Xsamp=Xsamp_LearnL, time=time_L, ratio=ratio/Niter, 
+  return(list(Xsamp=Xsamp_LearnL,epsilon=epsilon, Niter=Niter, L_emp=L_emp,
+              time=time_L, ratio=ratio/Niter, 
               ratio_theory=ratio_theory/Niter))
 }
