@@ -9,7 +9,7 @@ library(coda)
 source("DefinedFunctions/data.R")
 
 #################### NUTS #############################
-set.seed(1e7)
+set.seed(1e6)
 rstan_options(auto_write = TRUE)
 num_cores <- parallel::detectCores()
 options(mc.cores = parallel::detectCores())
