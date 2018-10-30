@@ -33,7 +33,7 @@ eHMCu <- function(L_emp,epsilon,M,theta,d,Niter,feature_names,U,grad_U,Leapfrog)
   Xsamp <- Transformation(Xsim,feature_names)
   
   Xsummary <- SummaryFunction(Xsamp)
-  return(list(Xsamp=Xsamp, Comp=Comp, epsilon=epsilon, Niter=Niter,
+  return(list(Xsamp=Xsamp,Comp=Comp, epsilon=epsilon, Niter=Niter,
               ratio_empirical=mean(ratio), ratio_theory=mean(ratio_theory),
               time=time_eHMCu,Xsummary=Xsummary))
 }

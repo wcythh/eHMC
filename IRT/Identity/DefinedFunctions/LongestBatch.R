@@ -17,6 +17,10 @@ LongestBatch <- function(U,grad_U,epsilon,L,M,x)
   while(Increment >= 0 | ell < L)
   {
     ell <- ell + 1
+    if(ell > 300)
+    {
+        return(c(current_x, 0, NA, ell, ell))
+    }
     proposed_v <- proposed_v - 0.5*epsilon*grad_U(proposed_x)
     proposed_x <- proposed_x + epsilon*as.vector(proposed_v/M)
     proposed_v <- proposed_v - 0.5*epsilon*grad_U(proposed_x)
