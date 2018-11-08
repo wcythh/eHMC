@@ -39,6 +39,10 @@ LongestBatch <- function(U,grad_U,epsilon,L,M,x)
       candidate_x <- proposed_x
       candidate_v <- proposed_v
     }
+    if(ell > 1e4)
+    {
+      return(c(current_x, 0, NA, ell, ell))
+    }
   }
   
   current_U <- U(current_x)
