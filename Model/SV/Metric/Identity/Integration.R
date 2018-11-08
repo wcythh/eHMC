@@ -151,3 +151,4 @@ Result3 <- parLapply(cl, 1:40, function(zz) MixSampler3(zz))
 rm(Result3)
 
 stopCluster(cl)
+
